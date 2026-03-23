@@ -7,6 +7,13 @@ import * as React from "react";
 import { Pressable, TextInput, View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+/**
+ * Renders the sign-in page that handles email/password authentication and optional email-code second-factor verification.
+ *
+ * The component presents an email/password form, initiates sign-in with Clerk, and — when required — prompts for an emailed verification code and completes second-factor authentication. It also activates the created session and navigates to the app root on successful sign-in.
+ *
+ * @returns The React element for the sign-in flow UI.
+ */
 export default function Page() {
     const { signIn, setActive, isLoaded } = useSignIn();
     const router = useRouter();

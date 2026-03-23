@@ -8,6 +8,16 @@ import { COLORS, getStatusColor } from "@/constants";
 import type { Order } from "@/constants/types";
 import { dummyOrders, formatDate } from "@/assets/assets";
 
+/**
+ * Renders the Orders screen showing the user's orders, a loading indicator, or an empty state.
+ *
+ * On mount it loads orders into component state, displays a centered loading spinner while loading,
+ * shows "No orders found" when the list is empty, and otherwise renders a list of order cards.
+ * Each card shows order number, date, status and payment badges, payment method, product thumbnails,
+ * item count, and total amount; tapping a card navigates to the order detail route (`/orders/{orderId}`).
+ *
+ * @returns The rendered Orders screen React element.
+ */
 export default function Orders() {
     const router = useRouter();
     const [orders, setOrders] = useState<Order[]>([]);

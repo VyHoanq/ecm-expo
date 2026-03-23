@@ -6,6 +6,15 @@ import { Ionicons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { CATEGORIES } from "@/constants";
 
+/**
+ * Renders the Add Product screen with a product-creation form and manages its local UI and form state.
+ *
+ * The component provides inputs for name, price, stock, sizes, description, category selection via modal,
+ * image selection (up to 5 images) via the image library, and a featured toggle. Submitting validates
+ * required fields and displays an error toast when validation fails.
+ *
+ * @returns The Add Product screen as a React element.
+ */
 export default function AddProduct() {
 
     const [submitting, setSubmitting] = useState(false);

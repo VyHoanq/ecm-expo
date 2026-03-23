@@ -11,6 +11,11 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 const { width } = Dimensions.get('window')
 
+/**
+ * Render the Home screen, including a banner slider with pagination, category list, popular products grid, and a newsletter call-to-action.
+ *
+ * @returns The Home screen React element.
+ */
 export default function Home() {
   const router = useRouter()
   const [activeBannerIndex, setActiveBannerIndex] = useState(0)

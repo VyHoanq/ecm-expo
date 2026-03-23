@@ -7,6 +7,13 @@ import { useRouter, Link } from "expo-router";
 import { useSignUp } from "@clerk/clerk-expo";
 import { COLORS } from "@/constants";
 
+/**
+ * Renders the sign-up flow UI that collects user information, initiates email-code verification via Clerk, and navigates on successful activation.
+ *
+ * The component toggles between the account creation form and an email-code verification form, manages loading and pending-verification state, and surfaces errors via toast notifications.
+ *
+ * @returns The rendered React Native view for the sign-up and email verification flow.
+ */
 export default function SignUpScreen() {
     const { isLoaded, signUp, setActive } = useSignUp();
     const router = useRouter();

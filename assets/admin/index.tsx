@@ -4,6 +4,13 @@ import { ScrollView, Text, View, ActivityIndicator, RefreshControl } from "react
 import { COLORS, getStatusColor } from "@/constants";
 import { dummyAdminStats } from "@/assets/assets";
 
+/**
+ * Admin dashboard screen that displays overview metrics and a list of recent orders with pull-to-refresh support.
+ *
+ * Fetches and displays aggregated stats (revenue, orders, products, users) and renders recent orders; shows a centered loading indicator while initial data is being loaded and supports user-initiated refresh to re-fetch stats.
+ *
+ * @returns The rendered admin dashboard UI as a React element.
+ */
 export default function AdminDashboard() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);

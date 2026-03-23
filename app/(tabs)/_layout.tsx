@@ -3,6 +3,13 @@ import { Feather, Ionicons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import React from 'react'
 
+/**
+ * Defines the app's bottom tab navigator with four tabs and a custom-styled tab bar.
+ *
+ * The navigator registers `index`, `cart`, `favorite`, and `profile` screens and provides per-tab icons that switch between filled and outline variants when focused.
+ *
+ * @returns A JSX element rendering a Tabs navigator configured with custom tab bar styling, active/inactive tint colors, hidden labels, and the four tab screens with their icons.
+ */
 export default function Tablayout() {
 
     return (

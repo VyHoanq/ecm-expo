@@ -5,6 +5,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants";
 import { dummyUser } from "@/assets/assets";
 
+/**
+ * Renders an admin-only tabbed layout with Dashboard, Products, and Orders screens and an Exit action in the header.
+ *
+ * @returns A React element that is one of: a centered loading indicator while state is loading; `null` if the current user is not an admin; or a configured `Tabs` navigator for admin users including an "Exit" header button.
+ */
 export default function AdminLayout() {
     const { user } = { user: dummyUser }
     const isLoaded = true;

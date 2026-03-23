@@ -4,6 +4,16 @@ import { Ionicons } from '@expo/vector-icons'
 import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 
+/**
+ * Render a tappable category tile showing an icon and label.
+ *
+ * Renders a touchable element that displays a circular icon above a text label; visual styling (background, icon color, and text color) changes based on selection state.
+ *
+ * @param item - Category data containing at least `name` and `icon`
+ * @param isSelected - Whether this category is currently selected
+ * @param onPress - Callback invoked when the tile is pressed
+ * @returns The touchable category element with icon and label
+ */
 export default function CategoryItem({ item, isSelected, onPress }: CategoryItemProps) {
     return (
         <TouchableOpacity onPress={onPress} className='mr-4 items-center'>

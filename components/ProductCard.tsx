@@ -5,6 +5,12 @@ import { Link } from 'expo-router'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
+/**
+ * Renders a tappable product card that links to the product detail route.
+ *
+ * @param product - Product data used to populate the card. Expected fields used: `_id` (for link), `images[0]` (display image), `isFeatured` (badge), `name`, and `price`.
+ * @returns The JSX element representing the product card.
+ */
 export default function ProductCard({ product }: ProductCardProps) {
     const isLiked = false; // This should come from product data, using a placeholder for now
     return (

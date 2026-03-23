@@ -7,6 +7,13 @@ import { COLORS } from "@/constants";
 import type { Address } from "@/constants/types";
 import { dummyAddress } from "@/assets/assets";
 
+/**
+ * Screen component that displays and manages a list of shipping addresses and provides an add/edit modal.
+ *
+ * Renders a loading indicator while addresses load, shows address cards with edit and delete actions, and exposes a modal for creating or updating an address.
+ *
+ * @returns The React element for the Addresses screen.
+ */
 export default function Addresses() {
     const [addresses, setAddresses] = useState<Address[]>([]);
     const [loading, setLoading] = useState(true);
