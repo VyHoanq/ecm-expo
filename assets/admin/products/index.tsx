@@ -5,6 +5,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants";
 import { dummyProducts } from "@/assets/assets";
 
+/**
+ * Admin screen that displays and lets administrators manage the product list.
+ *
+ * Fetches a local dummy product dataset on mount, shows a loading indicator until data is loaded, and supports pull-to-refresh to reload the list. Provides navigation to add and edit product screens and a delete flow that shows a confirmation alert; confirming a delete removes the item from the component's local state (no network/database calls).
+ *
+ * @returns The rendered React Native UI for listing and managing products, including header with total count and add button, a scrollable product list with edit/delete actions, and a refresh control.
+ */
 export default function AdminProducts() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);

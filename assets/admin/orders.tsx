@@ -4,6 +4,13 @@ import { COLORS, getStatusColor } from "@/constants";
 import { Ionicons } from "@expo/vector-icons";
 import { dummyOrders, dummyUser } from "@/assets/assets";
 
+/**
+ * Renders the admin orders screen with a list of orders, pull-to-refresh, and a modal for updating an order's status.
+ *
+ * Shows an initial loading indicator, a "No orders found" state when there are no orders, and a scrollable list of order cards. Each card displays order metadata, customer and shipping details, line items, total amount, and a status pill that opens a modal. Selecting a status updates the order's `orderStatus` in local component state and closes the modal (no network persistence is performed).
+ *
+ * @returns The rendered AdminOrders screen UI.
+ */
 export default function AdminOrders() {
     const [loading, setLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);

@@ -7,6 +7,16 @@ import { Ionicons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { dummyProducts } from "@/assets/assets";
 
+/**
+ * EditProduct screen component that provides a full UI for editing an existing product.
+ *
+ * Loads product data using the `id` route parameter, exposes form fields for name, price,
+ * stock, sizes, category, description, featured flag, and images (existing and newly picked),
+ * validates required fields on submit, builds a FormData payload including existing and new images,
+ * shows loading/submitting indicators, and displays error toasts on failures.
+ *
+ * @returns A JSX element rendering the edit product form and related modals, image picker, and controls.
+ */
 export default function EditProduct() {
     const { id } = useLocalSearchParams();
     const router = useRouter();

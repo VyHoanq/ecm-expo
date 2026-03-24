@@ -8,6 +8,13 @@ import { COLORS } from "@/constants";
 import type { Order, Product } from "@/constants/types";
 import { dummyOrders } from "@/assets/assets";
 
+/**
+ * Screen component that displays detailed information for an order identified by the `id` route parameter.
+ *
+ * Renders a loading indicator while the order is being resolved from local data; if no matching order is found it displays "Order not found". When an order is available it shows an order-status timeline, the list of ordered products (with images, size, price, and quantity), shipping address, and a payment summary with formatted totals and status coloring.
+ *
+ * @returns The React element for the Order Details screen.
+ */
 export default function OrderDetails() {
     const { id } = useLocalSearchParams();
     const [order, setOrder] = useState<Order | null>(null);

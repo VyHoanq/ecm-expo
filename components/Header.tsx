@@ -5,6 +5,17 @@ import { useRouter } from 'expo-router'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
+/**
+ * Renders a top app header with configurable back/menu/logo/title, search, and cart controls.
+ *
+ * @param title - Optional title text shown when `showLogo` is false.
+ * @param showBack - If true, displays a back button that navigates back.
+ * @param showSearch - If true, displays a search icon on the right side.
+ * @param showCart - If true, displays a cart icon with an item count badge and navigates to the cart on press.
+ * @param showMenu - If true, displays a menu icon on the left side.
+ * @param showLogo - If true, displays the app logo in place of the title.
+ * @returns A React element representing the header.
+ */
 export default function Header({ title, showBack, showSearch, showCart, showMenu, showLogo }: HeaderProps) {
     const router = useRouter()
     const { itemCount } = { itemCount: 6 }
